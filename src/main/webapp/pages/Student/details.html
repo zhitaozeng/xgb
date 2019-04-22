@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+Template Name: Metronic with Continuing Education
+Version: 1.0
+Author: TinyJian - Final Lab in Computer&Communication
+Website: http://finalab.com & http://www.csust.edu.cn/pub/cslg/jgsz/yxsz/jsjytxgcxy/
+Contact: For Secret
+Purchase: For Secret
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8"/>
+    <title>继续教育学院 - 日常管理系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/__PUBLIC__/Assets/global/css/gfonts1.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PLUGINS USED BY X-EDITABLE -->
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/select2-4.0.3/dist/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-datepicker/css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/bootstrap-editable/css/bootstrap-editable.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/inputs-ext/address/address.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+    <!-- END PLUGINS USED BY X-EDITABLE -->
+    <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+    <link href="/__PUBLIC__/Assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="/__PUBLIC__/Assets/admin/layout/css/themes/light2.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/__PUBLIC__/Assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .noticeTd{
+            background-color: #e8f0f8;
+            width: 100px;
+            text-align: center;
+        }
+        table td{
+            border-top: 1px solid rgb(137,191,167);
+            border-left: 1px solid rgb(137,191,167);
+            font-family: "宋体";
+            font-size: 15px;
+            height:24px;
+
+        }
+        table {
+            width: 600px;
+            margin: 0 auto;
+            border-right: 1px solid rgb(137,191,167);
+            border-bottom: 1px solid rgb(137,191,167);
+        }
+        .longTd{
+            height:48px;
+        }
+    </style>
+    <!-- END THEME STYLES -->
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+<body class="page-header-fixed page-quick-sidebar-over-content page-style-square">
+<!-- BEGIN HEADER -->
+<include file="../Common/header" />
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <include file="../Common/sidebar" />
+
+
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content" style="min-height:1556px">
+
+
+            <!-- BEGIN PAGE HEADER-->
+            <h3 class="page-title">
+                学生信息 <small> 单个学生的详细信息</small>
+            </h3>
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="/index.php">日常管理系统</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:;">查看学生所有信息</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <label><input type="checkbox" id="autoopen">&nbsp;自动切换至下一项</label>
+                    <label><input type="checkbox" id="inline">&nbsp;行内编辑</label>
+                    <button id="enable" class="btn blue">启用 / 关闭 编辑功能</button>
+                    <a href="{$returnUrl}" class="btn btn-info">返回</a>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="user" class="table table-bordered table-striped">
+                        <tbody>
+                        <tr>
+                            <td style="width:15%">
+                                学号
+                            </td>
+                            <td style="width:50%">
+                                {$stu['num']}
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									不可编辑 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                学生姓名
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="name" data-type="text" data-pk="1" data-original-title="输入学生姓名">
+                                    {$stu['name']}
+
+                                </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									简单文本 </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                状态
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="status" data-type="select" data-pk="1" data-value="{$stu['status']}" data-original-title="选择学生状态">
+                                </a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									通过下拉框选择状态 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                性别
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="sex" data-type="select" data-pk="1" data-value="{$stu['sex']}" data-original-title="选择性别">
+
+                                </a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									通过下拉框选择性别 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                身份证号
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="idcard" data-type="text" data-original-title="输入学生身份证号码">
+                                    {$stu['idcard']}
+                                </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									简单文本 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                入学时间
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="rxsj" data-type="combodate"
+                                    data-value="{$year}-{$month}"
+                                    data-format="YYYY-MM"
+                                    data-viewformat="YYYY年MM月"
+                                    data-template="YYYY 年 MMM 月 "
+                                    data-pk="1"
+                                    data-original-title="请选择入学时间"
+                                >
+                                    {$year}年{$month}月
+                                </a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									年份-月份选择</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                宿舍位置
+                            </td>
+                            <td style="width:50%">
+                                   {$stu['dorm']}
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									请于 宿舍管理->床位管理 处操作该项
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                民族
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="ethnic" data-type="text" data-original-title="输入民族">
+                                    {$stu['ethnic']} </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                自习教室
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="self_study_room" data-type="text" data-original-title="输入自习教室">
+                                    {$stu['self_study_room']} </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+
+                                    </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:15%">
+                                自考专业
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="self_taught_major" data-type="text" data-original-title="输入自考专业(如果是自考生)">
+                                    {$stu['self_taught_major']} </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+                                        自考生专项，如果不是请勿填写
+                                    </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:15%">
+                                QQ号
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="qqnum" data-type="text" data-original-title="输入学生QQ号">
+                                   {$stu['qq']} </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									简单数字文本 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%">
+                                手机号码
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="telnum" data-type="text" data-original-title="输入学生手机号码">
+                                    {$stu['selfphone']} </a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									简单数字文本 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                政治面貌
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="zzmm" data-type="text" data-original-title="输入学生政治面貌">
+                                    {$stu['politicalstatus']} </a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									从下拉框中选择政治面貌</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:15%">
+                                家庭住址
+                            </td>
+                            <td style="width:50%">
+                                <a href="javascript:;" id="jtzz" data-type="textarea" data-pk="1" data-original-title="输入家庭住址">{$stu['address']}</a>
+                            </td>
+                            <td style="width:35%">
+									<span class="text-muted">
+									简单数字文本 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                直系亲属
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="family" data-type="textarea" data-pk="1" data-original-title="请输入亲属联系方式">{$stu['relativephone']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                重大事项记录
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="zdssjl" data-type="textarea" data-pk="1" data-original-title="请输入重大事项记录">{$stu['event']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入</span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                请假记录
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="qjjl" data-type="textarea" data-pk="1" data-original-title="请输入请假记录">{$stu['leaverecord']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                担任学生干部情况
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="drxsgbqk" data-type="textarea" data-pk="1" data-original-title="请输入担任学生干部情况">{$stu['studentcadre']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入
+                                    </span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                违纪处分
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="wjcf" data-type="textarea" data-pk="1" data-original-title="请输入违纪处分">{$stu['punishment']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                获奖情况
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="hjqk" data-type="textarea" data-pk="1" data-original-title="请输入获奖情况">{$stu['award']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                入党积极分子动态记录
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="rdjjfzdtjl" data-type="textarea" data-pk="1" data-original-title="请输入入党积极分子动态记录">{$stu['activist']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                备注
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="beizhu" data-type="textarea" data-pk="1" data-original-title="请输入备注">{$stu['remark']}</a>
+                            </td>
+                            <td>
+									<span class="text-muted">
+									按CTRL+ENTER完成输入</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div style="width:800px;margin:0 auto;">
+                    <div class="portlet box red-intense">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-globe"></i> 学生成绩
+                            </div>
+
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse" data-original-title="" title="">
+                                </a>
+                                <a href="javascript:;" id="a_reload" class="reload" data-original-title="" title="">
+                                </a>
+                            </div>
+                            <div class="actions">
+
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="form-horizontal" style="width:400px;margin:0 auto">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">学年:</label>
+                                        <div class="col-md-8">
+                                            <select id="term_id" style="width: 200px;" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <table class="table table-striped table-bordered table-hover" id="tb_grade">
+                                <thead>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<include file="../Common/footer" />
+
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="/__PUBLIC__/Assets/global/plugins/respond.min.js"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="/__PUBLIC__/Assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="/__PUBLIC__/Assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<!-- BEGIN PLUGINS USED BY X-EDITABLE -->
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/select2-4.0.3/dist/js/select2.min.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/moment.min.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/jquery.mockjax.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/bootstrap-editable/js/bootstrap-editable.js"></script>
+
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/inputs-ext/address/address.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/inputs-ext/family/family.js"></script>
+
+<script type="text/javascript" src="/__PUBLIC__/Assets/global/plugins/bootstrap-editable/inputs-ext/wysihtml5/wysihtml5.js"></script>
+
+<!-- END X-EDITABLE PLUGIN -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="/__PUBLIC__/Assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN My SCRIPTS -->
+<include file="../Common/js_common" />
+<script src="__STATIC__/js/Common/TableAdvance.js" type="text/javascript"></script>
+<script src="__STATIC__/js/Common/SelectHelper.js" type="text/javascript"></script>
+<script src="/__PUBLIC__/Assets/my/FormEditable.js" type="text/javascript"></script>
+<script>
+    stu_id = {$stu['id']};
+    class_id = {$cid};
+</script>
+<script src="__STATIC__/js/Student/details.js"></script>
+<!-- END My SCRIPTS -->
+
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

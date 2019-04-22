@@ -1,0 +1,9 @@
+.editable-family {
+    display: block;
+    margin-bottom: 5px;  
+}
+
+.editable-family span {
+    width: 70px;  
+    display: inline-block;
+}

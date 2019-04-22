@@ -1,0 +1,121 @@
+.pl-label{
+	    width: 5.555555%;
+	    padding-right: 5px !important;
+    	padding-left: 25px !important;
+}
+.pl-select{
+	    margin-top: -0.7%;
+	    margin-right:1%;
+}
+.pl_grade_select{
+	width:11%;
+	margin-top: -0.7%;
+}
+.pl_btn{
+	margin-top: -7%;
+    margin-left: 20%;
+}
+.pl_box{
+	padding-bottom: 40px;
+}
+.pl_box,.choosed_box{
+	width: 80%;
+    margin: 0 2%;
+    display: inline-block;
+    min-height: 200px;
+    border: 1px solid #999;
+    margin-top: 1%;
+}
+.choosed_box{
+	 margin-bottom: 2%;
+	 min-height: 120px !important;
+}
+.uncheck_btn{
+	color: gray;
+}
+.checked_btn{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.choose{
+	width:100%;
+	position: absolute;
+    bottom: 0px;
+}
+.choose_boy,.choose_girl,.confirm_count{
+	margin-bottom: 1%;
+    margin-left: 1%;
+}
+.pl_show{
+	margin-top: 2%;
+	margin-left: 1%;
+	}
+.pl_datatables{
+	margin-top:2% !important;
+	float: left  !important;
+    margin-left: 2%  !important;
+}
+.pl_table{
+	width: 84.22222%;
+}
+.pl_s2select{
+	    margin-top: -25%;
+}
+.pl_s2select2{
+	    margin-top: -40%;
+}
+.pl_s2label{
+	width:100%;
+	padding-right: 5px !important;
+    padding-left: 25px !important;
+}
+.s2_table{
+	    margin-left: -10px;
+}
+.user-details3,.user-details{
+	line-height: 0.6em;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: -30px;
+    position: absolute;
+    border: 1px dotted black;
+    width: 120px;
+    height: 45px;
+    background-color: white;
+}
+.user-details2{
+	line-height: 0.6em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-left: -30px;
+    position: absolute;
+    border: 1px dotted black;
+    width: 120px;
+    height: 25px;
+    background-color: white;
+}
+.single_check{
+	min-width:100px;
+    height: 50px;
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.girl{
+	text-decoration: underline;;
+}
+.single_person{
+	float: left;
+    margin: 5px;
+}
+.shadow{
+	display: none;
+}
+.bold{
+	    font-weight: bold;
+}
+#search_single{
+	margin-left: 135% !important;
+    margin-top: -1% !important;
+}
