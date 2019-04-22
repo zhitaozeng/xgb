@@ -42,14 +42,17 @@ public class UserController {
     @RequiresPermissions("user:add")
     @RequestMapping(value = "/user/add",method = RequestMethod.POST)
     public String addRole(@RequestParam("username")String username,@RequestParam("password")String password,@RequestParam("role")Integer rid){
-        //创建新用户
-        userService.createNewUser(username,password);
-        //获取用户id
-        SysUser user = userService.findByUsername(username);
-        Integer uid = user.getUid();
-
-        //将用户id和角色id插入用户角色表
-        userRoleService.addUidRid(uid,rid);
+        //校验用户名是否重复
+        SysUser userDB = this.userService.findByUsername(username);
+        if (userDB == null){
+            //创建新用户
+            userService.createNewUser(username,password);
+            //获取用户id
+            SysUser user = userService.findByUsername(username);
+            Integer uid = user.getUid();
+            //将用户id和角色id插入用户角色表
+            userRoleService.addUidRid(uid,rid);
+        }
         //跳转到用户查看页面
         return "redirect:/user/find";
     }
