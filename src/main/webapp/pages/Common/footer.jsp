@@ -9,7 +9,7 @@
 <!-- BEGIN FOOTER -->
 <div class="copyright">
     <div class="page-footer-inner">
-        2018 &copy; XGB. By zzt
+        2019 &copy; XGB. By zzt
     </div>
     <div class="scroll-to-top">
         <i class="icon-arrow-up"></i>

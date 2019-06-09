@@ -342,7 +342,7 @@
                         <li class="divider">
                         </li> -->
                         <li>
-                            <a href="/index.php?app=Manage&ctr=User&act=password">
+                            <a href="/modify/password">
                                 <i class="icon-key"></i> 修改密码 </a>
                         </li>
                         <li>

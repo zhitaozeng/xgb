@@ -1,11 +1,13 @@
 package com.xgb.controller;
 
 
+import com.xgb.Service.UserService;
 import com.xgb.model.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,6 +25,8 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
 
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/login")
     public String login(){
@@ -56,8 +60,25 @@ public class IndexController {
             session.setAttribute("user",user);
             return "redirect:/index";
         }catch (Exception e){
+            System.out.println(e.getMessage());
             return "Index/login";
         }
+    }
+
+    //跳转到修改密码页面
+    @RequestMapping(value = "/modify/password", method = RequestMethod.GET)
+    public String modifyPassword(){
+        return "Index/update";
+    }
+
+    //执行修改密码的功能
+    @RequestMapping(value = "/modify/password",method = RequestMethod.POST)
+    public String modifyPassword(@RequestParam("uid")Integer uid,@RequestParam("username")String username,@RequestParam("password")String password){
+
+        //更改用户表信息
+        userService.updateInfo(uid,username,password);
+        //跳转到用户查看页面
+        return "redirect:/logout";
     }
 
 }
