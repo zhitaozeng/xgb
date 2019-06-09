@@ -21,6 +21,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * 学生controller：用于学生的查找，添加，修改，删除
+ *
+ */
 @Controller
 public class StudentController {
 

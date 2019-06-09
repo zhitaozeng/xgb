@@ -14,7 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-
+/**
+ *
+ * 用户controller：用于用户的查找，添加，修改，删除
+ *
+ */
 @Controller
 public class UserController {
 

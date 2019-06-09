@@ -31,6 +31,11 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * 宿舍controller：包含楼栋操作和床位操作
+ *
+ */
 @Controller
 public class DormController {
 

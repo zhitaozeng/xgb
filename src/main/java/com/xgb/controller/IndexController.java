@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ *
+ * 首页controller：用于登入，注销，首页的跳转等
+ *
+ */
 @Controller
 public class IndexController {
 

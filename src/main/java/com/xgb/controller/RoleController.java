@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * 角色controller：用于角色的查找，添加，修改，删除
+ *
+ */
 @Controller
 public class RoleController {
 

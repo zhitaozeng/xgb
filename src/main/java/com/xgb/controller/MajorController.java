@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ *
+ * 专业controller：用于专业的查找，添加，修改，删除
+ *
+ */
 @Controller
 public class MajorController {
 
