@@ -9,7 +9,7 @@ public interface DormService {
 
     List<Dorm> findByBid(Integer bid);
 
-    void addByIdStus(Integer id, Integer[] stus);
+    boolean addByIdStus(Integer id, Integer[] stus);
 
     void clearDorm(Integer id);
 

@@ -118,8 +118,13 @@ public class DormController {
     @RequestMapping("/dorm/addDormByDidStus")
     @ResponseBody
     public String addDormByDidStus(@RequestParam("id")Integer id ,@RequestParam("stus")Integer[] stus){
-        dormService.addByIdStus(id,stus);
-        return "";
+        boolean bool = dormService.addByIdStus(id, stus);
+        if (bool){
+            return "";
+        }else {
+            return "添加人数超过房间上限，添加失败！";
+        }
+
     }
 
     //清空宿舍的学生

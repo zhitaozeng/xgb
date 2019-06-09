@@ -400,6 +400,9 @@ jQuery(document).ready(function() {
                         url: "/dorm/addDormByDidStus?id=" + room_id+"&stus="+studnets,
                         context: document.body,
                         success: function (data) {
+                        if (data != ""){
+                            alert("超过房间容纳人数，请重新选择");
+                        }
                             displayDorm();
                             $("#recheck").click();
                             $("#search_class").click();

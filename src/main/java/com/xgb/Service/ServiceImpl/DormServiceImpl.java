@@ -40,8 +40,11 @@ public class DormServiceImpl implements DormService {
 
     //通过id和学生数组添加学生到宿舍
     @Override
-    public void addByIdStus(Integer id, Integer[] stus) {
+    public boolean addByIdStus(Integer id, Integer[] stus) {
         Dorm dorm = dormMapper.selectByPrimaryKey(id);
+        if (dorm.getNum() + stus.length > 4 ){
+            return false;
+        }
         dorm.setNum( dorm.getNum() + stus.length);
         dormMapper.updateByPrimaryKeySelective(dorm);
         for (int i=0;i<stus.length;i++){
@@ -50,6 +53,7 @@ public class DormServiceImpl implements DormService {
             student.setDormid(id);
             studentMapper.updateByPrimaryKeySelective(student);
         }
+        return true;
     }
 
     //更新楼栋
