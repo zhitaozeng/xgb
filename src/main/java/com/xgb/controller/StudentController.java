@@ -105,7 +105,7 @@ public class StudentController {
 
 
     //删除学生信息
-    @RequestMapping("/student/delete")
+    @RequestMapping(value = "/student/delete", method = RequestMethod.GET)
     public String deleteStudent(@RequestParam("id")Integer id){
         //将学生对应的寝室人数减1
         Student student = studentService.findById(id);

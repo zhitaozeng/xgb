@@ -247,7 +247,7 @@ public class StudentServiceImpl implements StudentService {
         student.setAddress(address);
         student.setSelfphone(selfphone);
         student.setRelativephone(relativephone);
-        studentMapper.updateByPrimaryKey(student);
+        studentMapper.updateByPrimaryKeySelective(student);
     }
 
     //根据id删除学生信息
