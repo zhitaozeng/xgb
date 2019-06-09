@@ -60,7 +60,7 @@ public class IndexController {
             session.setAttribute("user",user);
             return "redirect:/index";
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            session.setAttribute("msg","用户不存在或密码错误");
             return "Index/login";
         }
     }

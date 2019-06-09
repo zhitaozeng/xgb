@@ -72,6 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN LOGIN FORM -->
     <div id="login_form">
         <h3 class="form-title">登陆到学管宝系统</h3>
+        <span>${sessionScope.msg}</span>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
             <span>
